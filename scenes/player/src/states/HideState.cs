@@ -9,7 +9,7 @@ public class HideState : State
 
     public override void EnterState(Player player)
     {
-        GD.Print("HIDE");
+        
     }
 
     public override void ExitState(Player player)

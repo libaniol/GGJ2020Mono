@@ -33,7 +33,6 @@ public class FallState : State
 
     public override void EnterState(Player player)
     {
-        GD.Print("FALL");
         Vector3 movement = new Vector3();
         movement = player.Movement;
     }

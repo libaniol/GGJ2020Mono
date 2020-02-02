@@ -10,7 +10,6 @@ public class IdleState : State
 
     public override void EnterState(Player player)
     {
-        GD.Print("IDLE");
         player.Movement = new Vector3();
         player.Velocity = new Vector3();
     }

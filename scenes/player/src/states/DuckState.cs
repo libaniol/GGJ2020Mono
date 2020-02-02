@@ -9,7 +9,7 @@ public class DuckState : State
 
     public override void EnterState(Player player)
     {
-        GD.Print("DUCK");
+
     }
 
     public override void ExitState(Player player)

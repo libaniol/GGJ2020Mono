@@ -34,7 +34,7 @@ public class MovementState : State
 
     public override void EnterState(Player player)
     {
-        GD.Print("MOVEMENT");
+
     }
 
     public override void ExitState(Player player)
