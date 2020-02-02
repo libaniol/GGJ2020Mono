@@ -33,6 +33,7 @@ public class JumpState : State
 
     public override void EnterState(Player player)
     {
+        GD.Print("JUMP");
         Vector3 movement = player.Velocity;
         float y = player.JumpStrength;
         movement.y = y;

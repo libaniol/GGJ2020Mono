@@ -34,7 +34,7 @@ public class MovementState : State
 
     public override void EnterState(Player player)
     {
-
+        GD.Print("MOVEMENT");
     }
 
     public override void ExitState(Player player)
@@ -55,7 +55,7 @@ public class MovementState : State
             player.ChangeState(new JumpState());
             return;
         }
-        if (player.Velocity.y < 0.0f)
+        if (player.Velocity.y < 0.0f && !player.IsOnFloor())
         {
             player.ChangeState(new FallState());
             return;

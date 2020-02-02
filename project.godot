@@ -8,9 +8,14 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "KinematicBody",
+"class": "Box",
+"language": "GDScript",
+"path": "res://scenes/box/src/Box.gd"
+} ]
 _global_script_class_icons={
-
+"Box": ""
 }
 
 [application]
@@ -21,6 +26,11 @@ config/icon="res://icon.png"
 [debug]
 
 gdscript/completion/autocomplete_setters_and_getters=true
+
+[display]
+
+window/size/width=640
+window/size/height=360
 
 [input]
 
@@ -55,6 +65,11 @@ movement={
 jump={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"unicode":0,"echo":false,"script":null)
+ ]
+}
+interaction={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":69,"unicode":0,"echo":false,"script":null)
  ]
 }
 
