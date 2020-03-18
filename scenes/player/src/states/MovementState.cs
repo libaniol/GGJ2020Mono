@@ -24,6 +24,10 @@ public class MovementState : State
         }
 
         player.Movement = movement.Normalized();
+        float rot = Mathf.Atan2(-player.Movement.x, -player.Movement.z);
+        Vector3 rotation = player.Rotation;
+        rotation.y = rot;
+        player.Rotation = rotation;
 
         player.Velocity = new Vector3(player.Movement.x * player.MoveSpeed,
                     player.Velocity.y,

@@ -1,0 +1,124 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/gui/main_menu/MainMenu.gd" type="Script" id=1]
+[ext_resource path="res://scenes/gui/main_menu/Titulo4.png" type="Texture" id=2]
+[ext_resource path="res://sfx/gameover.wav" type="AudioStream" id=3]
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -2.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Options" type="Button" parent="."]
+anchor_left = 0.389
+anchor_top = 0.822
+anchor_right = 0.611
+anchor_bottom = 0.919
+margin_left = -168.23
+margin_top = -172.324
+margin_right = -168.31
+margin_bottom = -172.244
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Options"]
+anchor_right = 1.007
+anchor_bottom = 1.029
+margin_right = 0.00598145
+margin_bottom = -0.0150032
+text = "Options"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="Start" type="Button" parent="."]
+anchor_left = 0.389
+anchor_top = 0.681
+anchor_right = 0.611
+anchor_bottom = 0.775
+margin_left = -167.501
+margin_top = -169.133
+margin_right = -167.581
+margin_bottom = -168.973
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Start"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1.0
+text = "START"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="YT" type="Button" parent="."]
+anchor_left = 0.888
+anchor_top = 0.044
+anchor_right = 0.96
+anchor_bottom = 0.146
+margin_left = -0.0184326
+margin_top = -0.141667
+margin_right = -0.0983887
+margin_bottom = 0.138329
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="YT"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = 1.0
+text = "YT"
+align = 1
+valign = 1
+
+[node name="FB" type="Button" parent="."]
+anchor_left = 0.772
+anchor_top = 0.044
+anchor_right = 0.848
+anchor_bottom = 0.146
+margin_left = -0.0800171
+margin_top = 0.159999
+margin_right = 0.279968
+margin_bottom = 0.439995
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="FB"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "fb"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
+[connection signal="pressed" from="Options" to="." method="_on_Options_pressed"]
+[connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="YT" to="." method="_on_YT_pressed"]
+[connection signal="pressed" from="FB" to="." method="_on_FB_pressed"]

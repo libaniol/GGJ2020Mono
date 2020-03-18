@@ -1,0 +1,83 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/game/Game.gd" type="Script" id=1]
+[ext_resource path="res://scenes/game/machine_game.gd" type="Script" id=2]
+
+[node name="Game" type="Node"]
+script = ExtResource( 1 )
+
+[node name="world" type="Spatial" parent="."]
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="machine_game" type="Control" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="Container" type="Panel" parent="Control/machine_game"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/machine_game/Container"]
+anchor_left = 0.141
+anchor_top = 0.186
+anchor_right = 0.861
+anchor_bottom = 0.814
+margin_left = -0.240005
+margin_top = 0.0400009
+margin_right = -0.0400391
+margin_bottom = -0.0400085
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="red" type="Button" parent="Control/machine_game/Container/HBoxContainer"]
+margin_right = 150.0
+margin_bottom = 226.0
+size_flags_horizontal = 3
+
+[node name="yellow" type="Button" parent="Control/machine_game/Container/HBoxContainer"]
+margin_left = 154.0
+margin_right = 304.0
+margin_bottom = 226.0
+size_flags_horizontal = 3
+
+[node name="blue" type="Button" parent="Control/machine_game/Container/HBoxContainer"]
+margin_left = 308.0
+margin_right = 460.0
+margin_bottom = 226.0
+size_flags_horizontal = 3
+
+[node name="Exit" type="Button" parent="Control/machine_game/Container"]
+anchor_left = 0.392
+anchor_top = 0.906
+anchor_right = 0.609
+anchor_bottom = 0.969
+margin_left = 0.119995
+margin_top = -0.160004
+margin_right = 0.23999
+margin_bottom = 0.159973
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/machine_game/Container/Exit"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "EXIT"
+align = 1
+valign = 1
+[connection signal="pressed" from="Control/machine_game/Container/HBoxContainer/red" to="Control/machine_game" method="_on_red_pressed"]
+[connection signal="pressed" from="Control/machine_game/Container/HBoxContainer/yellow" to="Control/machine_game" method="_on_yellow_pressed"]
+[connection signal="pressed" from="Control/machine_game/Container/HBoxContainer/blue" to="Control/machine_game" method="_on_blue_pressed"]
+[connection signal="pressed" from="Control/machine_game/Container/Exit" to="Control/machine_game" method="_on_Exit_pressed"]

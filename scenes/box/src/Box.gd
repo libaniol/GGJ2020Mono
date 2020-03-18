@@ -2,7 +2,7 @@ class_name Box
 
 extends KinematicBody
 
-export var gravity : float = 0.0
+export var gravity : float = -50
 var velocity : Vector3 = Vector3()
 
 func _process(delta):
